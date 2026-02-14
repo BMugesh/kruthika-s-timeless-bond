@@ -62,9 +62,6 @@ const Index = () => {
               <Section4Memory />
               <Section5Proud />
               <Section6Final />
-
-              {/* Extra spacing at the end for fade effect */}
-              <div className="h-screen" />
             </main>
           </div>
         </SmoothScroll>
