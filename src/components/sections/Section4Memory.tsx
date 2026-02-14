@@ -78,32 +78,28 @@ const Section4Memory = () => {
                             transition={{ duration: 2.5, ease: 'easeOut' }} // Slower transition
                         >
                             <div className="relative w-full max-w-3xl aspect-[4/3] overflow-hidden rounded-lg">
-                                {/* Placeholder for user image */}
-                                <div
-                                    className="w-full h-full bg-gradient-to-br from-steelBlue to-duskBlue-light"
+                                {/* Memory image with cinematic treatment */}
+                                <img
+                                    src="/images/WhatsApp Image 2026-02-13 at 11.40.49 AM.jpeg"
+                                    alt="Memory"
+                                    className="w-full h-full object-cover"
                                     style={{
-                                        filter: 'saturate(0.8) brightness(1.1) hue-rotate(-10deg)',
+                                        filter: 'saturate(0.7) brightness(0.9) contrast(1.1) sepia(0.15)',
                                         boxShadow: 'inset 0 0 100px rgba(0, 0, 0, 0.3)',
                                     }}
-                                >
-                                    {/* Film grain overlay on image */}
-                                    <div
-                                        className="absolute inset-0 opacity-10"
-                                        style={{
-                                            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-                                        }}
-                                    />
+                                />
 
-                                    {/* Vignette on image */}
-                                    <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-nightBlue/40" />
+                                {/* Film grain overlay on image */}
+                                <div
+                                    className="absolute inset-0 opacity-15 pointer-events-none"
+                                    style={{
+                                        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+                                        mixBlendMode: 'overlay',
+                                    }}
+                                />
 
-                                    {/* Placeholder text */}
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <p className="text-silverGlow/40 text-xl font-sans italic">
-                                            [Your image will appear here]
-                                        </p>
-                                    </div>
-                                </div>
+                                {/* Vignette on image */}
+                                <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-nightBlue/50 pointer-events-none" />
                             </div>
                         </motion.div>
 
